@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import heropic from "../components/image/hero.jpg";
@@ -22,11 +22,16 @@ function StatItem({ number, label, icon }: { number: string; label: string; icon
 }
 
 export default function HeroSection() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const yellowContainerRef = useRef(null);
   const yellowContainerInView = useInView(yellowContainerRef, { once: true });
 
   const whiteContainerRef = useRef(null);
   const whiteContainerInView = useInView(whiteContainerRef, { once: true });
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(prev => !prev);
+  };
 
   return (
     <div className="relative bg-black text-white min-h-screen overflow-hidden">
@@ -52,12 +57,23 @@ export default function HeroSection() {
           <a href="#" className="text-white hover:text-yellow-400">Projects</a>
           <a href="#" className="text-white hover:text-yellow-400">Contact</a>
         </div>
-        <button className="md:hidden text-white">
+        <button className="md:hidden text-white" onClick={toggleMobileMenu}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </nav>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-16 left-0 right-0 bg-black text-white flex flex-col space-y-4 py-4 px-6 md:hidden">
+          <a href="#" className="hover:text-yellow-400">Home</a>
+          <a href="#" className="hover:text-yellow-400">About</a>
+          <a href="#" className="hover:text-yellow-400">Services</a>
+          <a href="#" className="hover:text-yellow-400">Projects</a>
+          <a href="#" className="hover:text-yellow-400">Contact</a>
+        </div>
+      )}
 
       {/* Main Hero Content */}
       <div className="relative z-10 container mx-auto px-8 pt-24 pb-48">
