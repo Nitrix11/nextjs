@@ -92,8 +92,8 @@ const ConstructionSection = () => {
                 className="object-cover"
                 priority
               />
-              {/* Folded corner effect */}
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-100 transform rotate-45 origin-bottom-right z-0"></div>
+              {/* Folded corner effect - visible only on medium and larger screens */}
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-100 transform rotate-45 origin-bottom-right z-0 hidden md:block"></div>
             </div>
           </div>
         </div>
@@ -101,8 +101,8 @@ const ConstructionSection = () => {
         {/* Video Section */}
         <div className="mb-16">
           <div className="relative max-w-4xl mx-auto">
-            {/* Folded corner effect */}
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-100 transform rotate-45 origin-bottom-right z-0"></div>
+            {/* Folded corner effect - visible only on medium and larger screens */}
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-100 transform rotate-45 origin-bottom-right z-0 hidden md:block"></div>
             {/* Video container with shadow */}
             <div className="relative z-10 overflow-hidden shadow-xl rounded-lg">
               <div className="aspect-w-16 aspect-h-9">
