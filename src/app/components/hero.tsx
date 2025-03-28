@@ -14,7 +14,7 @@ function StatItem({ number, label, icon }: { number: string; label: string; icon
     >
       <span className="text-yellow-600 mr-2 text-2xl animate-pulse">{icon}</span>
       <div>
-        <div className="text-3xl font-bold text-yellow-600">{number} *</div>
+        <div className="text-3xl font-bold text-yellow-600">{number}</div>
         <div className="text-sm uppercase tracking-wider">{label}</div>
       </div>
     </motion.div>
@@ -64,7 +64,7 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-7xl font-light mb-2">Building the Future</h1>
           <h2 className="text-6xl md:text-8xl font-bold text-yellow-400 mb-8">YOUR VISION, OUR MISSION</h2>
-          
+
           <p className="text-xl md:text-2xl mb-12">
             At Hardhat Solution, we deliver innovative construction solutions tailored to your needs, ensuring excellence in every project.
           </p>
@@ -76,13 +76,20 @@ export default function HeroSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </button>
-            
+
             <button className="bg-transparent hover:bg-yellow-500 text-yellow-500 hover:text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300">
-              Learn More *
+              Learn More
             </button>
           </div>
 
           <div className="w-16 h-1 bg-yellow-400 mb-16"></div>
+
+          {/* Add StatItem components here */}
+          <div className="flex justify-evenly mb-16">
+            <StatItem number="100+" label="Projects" icon="🏗️" />
+            <StatItem number="50+" label="Clients" icon="👥" />
+            <StatItem number="98%" label="Satisfaction" icon="✅" />
+          </div>
         </div>
       </div>
 
@@ -114,7 +121,7 @@ export default function HeroSection() {
           >
             <h3 className="text-2xl font-bold mb-4">Project Highlights</h3>
             <h4 className="text-2xl font-bold mb-6">Success Stories</h4>
-            
+
             <div className="grid grid-cols-2 gap-8">
               {/* Additional content can go here */}
             </div>
