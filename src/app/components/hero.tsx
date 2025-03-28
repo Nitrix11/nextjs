@@ -25,7 +25,6 @@ export default function HeroSection() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const yellowContainerRef = useRef(null);
   const yellowContainerInView = useInView(yellowContainerRef, { once: true });
-
   const whiteContainerRef = useRef(null);
   const whiteContainerInView = useInView(whiteContainerRef, { once: true });
 
@@ -51,11 +50,11 @@ export default function HeroSection() {
       <nav className="relative z-10 flex justify-between items-center py-6 px-8 border-b border-gray-700">
         <div className="text-yellow-400 font-bold text-2xl">Hardhat Solution</div>
         <div className="hidden md:flex space-x-8">
-          <a href="#" className="text-white hover:text-yellow-400">Home</a>
-          <a href="#" className="text-white hover:text-yellow-400">About</a>
-          <a href="#" className="text-white hover:text-yellow-400">Services</a>
-          <a href="#" className="text-white hover:text-yellow-400">Projects</a>
-          <a href="#" className="text-white hover:text-yellow-400">Contact</a>
+          <a href="#home" className="text-white hover:text-yellow-400">Home</a>
+          <a href="#about" className="text-white hover:text-yellow-400">About</a>
+          <a href="#services" className="text-white hover:text-yellow-400">Services</a>
+          <a href="#projects" className="text-white hover:text-yellow-400">Projects</a>
+          <a href="#contact" className="text-white hover:text-yellow-400">Contact</a>
         </div>
         <button className="md:hidden text-white" onClick={toggleMobileMenu}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,17 +65,17 @@ export default function HeroSection() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 right-0 bg-black text-white flex flex-col space-y-4 py-4 px-6 md:hidden">
-          <a href="#" className="hover:text-yellow-400">Home</a>
-          <a href="#" className="hover:text-yellow-400">About</a>
-          <a href="#" className="hover:text-yellow-400">Services</a>
-          <a href="#" className="hover:text-yellow-400">Projects</a>
-          <a href="#" className="hover:text-yellow-400">Contact</a>
+        <div className="absolute top-16 left-0 right-0 bg-black text-white flex flex-col space-y-4 py-4 px-6 md:hidden z-20">
+          <a href="#home" className="hover:text-yellow-400">Home</a>
+          <a href="#about" className="hover:text-yellow-400">About</a>
+          <a href="#services" className="hover:text-yellow-400">Services</a>
+          <a href="#projects" className="hover:text-yellow-400">Projects</a>
+          <a href="#contact" className="hover:text-yellow-400">Contact</a>
         </div>
       )}
 
       {/* Main Hero Content */}
-      <div className="relative z-10 container mx-auto px-8 pt-24 pb-48">
+      <div className="relative z-10 container mx-auto px-8 pt-24 pb-48" id="home">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-7xl font-light mb-2">Building the Future</h1>
           <h2 className="text-6xl md:text-8xl font-bold text-yellow-400 mb-8">YOUR VISION, OUR MISSION</h2>
@@ -110,7 +109,7 @@ export default function HeroSection() {
       </div>
 
       {/* Combined Yellow and White Container with Overlapping Effect */}
-      <div className="relative z-20 -mt-32 bg-white py-16">
+      <div className="relative z-20 -mt-32 bg-white py-16" id="about">
         <div className="container mx-auto flex flex-col md:flex-row justify-center">
           {/* Yellow Container */}
           <motion.div
@@ -146,7 +145,7 @@ export default function HeroSection() {
       </div>
 
       {/* Background for the second section */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-16" id="services">
         {/* Additional content can go here */}
       </div>
     </div>
