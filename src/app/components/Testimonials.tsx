@@ -1,7 +1,5 @@
-// components/Testimonials.js
 import Image from 'next/image'; // Import Next.js Image component
 import image from './image/image1.jpg';
-
 import image4 from './image/image4.jpg';
 import image5 from './image/image5.jpg';
 import brand from "./image/WhatsApp Image 2025-03-27 at 03.18.22_767bfbf7.jpg";
@@ -51,9 +49,9 @@ const Testimonials = () => {
             {/* Blog Section */}
             <div className="mt-16">
                 <h2 className="text-3xl mb-6 text-black">Our Latest News & Blog</h2>
-                <div className="flex justify-around flex-wrap">
+                <div className="flex flex-col lg:flex-row justify-around flex-wrap">
                     {blogData.map((post, index) => (
-                        <div key={index} className="bg-white m-2 p-4 rounded-lg shadow-lg w-1/3 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div key={index} className="bg-white m-2 p-4 rounded-lg shadow-lg w-full lg:w-1/3 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                             <Image 
                                 src={post.image} 
                                 alt={post.title} 
