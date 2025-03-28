@@ -5,7 +5,7 @@ import Image from 'next/image';
 import image2 from './image/image 2.jpg'; // Ensure the file exists and path is correct
 import image7 from './image/image7.jpg'; // Ensure the file exists and path is correct
 import image6 from './image/image6.jpg'; // Ensure the file exists and path is correct
-import three from"./image/e28977e2-c930-419f-be96-3a7686693095.jpg"
+
 
 const teamMembers = [
     {

@@ -1,6 +1,7 @@
-import React from 'react';
+"use client";
+import React, { useRef } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import heropic from "../components/image/hero.jpg";
 
 function StatItem({ number, label, icon }: { number: string; label: string; icon: string }) {
@@ -21,23 +22,29 @@ function StatItem({ number, label, icon }: { number: string; label: string; icon
 }
 
 export default function HeroSection() {
+  const yellowContainerRef = useRef(null);
+  const yellowContainerInView = useInView(yellowContainerRef, { once: true });
+
+  const whiteContainerRef = useRef(null);
+  const whiteContainerInView = useInView(whiteContainerRef, { once: true });
+
   return (
     <div className="relative bg-black text-white min-h-screen overflow-hidden">
       {/* Background Image with 100vh height */}
       <div className="absolute inset-0 z-0 h-screen">
         <Image
-          src={heropic} // Replace with your image
+          src={heropic}
           alt="Construction background"
-          layout="fill" // Use 'fill' for full width
-          objectFit="cover" // Set to cover to maintain aspect ratio
-          className="object-cover opacity-70" // Ensure it covers the area
+          layout="fill"
+          objectFit="cover"
+          className="object-cover opacity-70"
           priority
         />
       </div>
 
       {/* Navigation Bar */}
       <nav className="relative z-10 flex justify-between items-center py-6 px-8 border-b border-gray-700">
-        <div className="text-yellow-400 font-bold text-2xl">LOGO</div>
+        <div className="text-yellow-400 font-bold text-2xl">Hardhat Solution</div>
         <div className="hidden md:flex space-x-8">
           <a href="#" className="text-white hover:text-yellow-400">Home</a>
           <a href="#" className="text-white hover:text-yellow-400">About</a>
@@ -55,23 +62,23 @@ export default function HeroSection() {
       {/* Main Hero Content */}
       <div className="relative z-10 container mx-auto px-8 pt-24 pb-48">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-light mb-2">Circle got smaller</h1>
-          <h2 className="text-6xl md:text-8xl font-bold text-yellow-400 mb-8">VISION GOT LARGER</h2>
+          <h1 className="text-5xl md:text-7xl font-light mb-2">Building the Future</h1>
+          <h2 className="text-6xl md:text-8xl font-bold text-yellow-400 mb-8">YOUR VISION, OUR MISSION</h2>
           
           <p className="text-xl md:text-2xl mb-12">
-            Enter: d.fie-voice where we operate. A successful website proudly showcases great diversity for successful emergencies in the world.
+            At Hardhat Solution, we deliver innovative construction solutions tailored to your needs, ensuring excellence in every project.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300 flex items-center justify-center">
-              <span className="mr-2">Get Listen</span>
+              <span className="mr-2">Get Started</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </button>
             
             <button className="bg-transparent hover:bg-yellow-500 text-yellow-500 hover:text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300">
-              Generalize *
+              Learn More *
             </button>
           </div>
 
@@ -83,23 +90,35 @@ export default function HeroSection() {
       <div className="relative z-20 -mt-32 bg-white py-16">
         <div className="container mx-auto flex flex-col md:flex-row justify-center">
           {/* Yellow Container */}
-          <div className="bg-yellow-400 text-black p-8 rounded-t-lg md:w-1/2">
-            <h3 className="text-2xl font-bold mb-4">Our proud</h3>
-            <h4 className="text-4xl font-bold mb-6">25 years of undefeated success</h4>
+          <motion.div
+            ref={yellowContainerRef}
+            className="bg-yellow-400 text-black p-8 rounded-t-lg md:w-1/2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={yellowContainerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Our Commitment</h3>
+            <h4 className="text-4xl font-bold mb-6">Over 30 Years of Excellence</h4>
             <p className="text-gray-700">
-              We have a long and proud history focused on environmental, social, and economic outcomes, creating spaces that respond effectively.
+              We pride ourselves on a legacy of quality, innovation, and sustainability, delivering projects that meet the highest standards.
             </p>
-          </div>
+          </motion.div>
 
           {/* White Container */}
-          <div className="bg-white text-black p-8 rounded-b-lg md:w-1/2">
-            <h3 className="text-2xl font-bold mb-4">Watch with us - 5</h3>
-            <h4 className="text-2xl font-bold mb-6">Successful/Project Finalized</h4>
+          <motion.div
+            ref={whiteContainerRef}
+            className="bg-white text-black p-8 rounded-b-lg md:w-1/2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={whiteContainerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Project Highlights</h3>
+            <h4 className="text-2xl font-bold mb-6">Success Stories</h4>
             
             <div className="grid grid-cols-2 gap-8">
               {/* Additional content can go here */}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

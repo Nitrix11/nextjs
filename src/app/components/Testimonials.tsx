@@ -1,8 +1,7 @@
 // components/Testimonials.js
 import Image from 'next/image'; // Import Next.js Image component
 import image from './image/image1.jpg';
-import image2 from './image/image2.jpg';
-import image3 from './image/image3.jpg';
+
 import image4 from './image/image4.jpg';
 import image5 from './image/image5.jpg';
 import brand from "./image/WhatsApp Image 2025-03-27 at 03.18.22_767bfbf7.jpg";
