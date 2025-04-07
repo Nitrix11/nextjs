@@ -38,3 +38,7 @@ const RecipeDetail: React.FC = () => {
 };
 
 export default RecipeDetail;
+
+
+
+
