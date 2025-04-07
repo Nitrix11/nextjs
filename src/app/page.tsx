@@ -17,7 +17,7 @@ export default function Home() {
      <PopularDishes/>
     <Footer/>
     {/* <Contact/> */}
-  <RecipesSection/>
+  {/* <RecipesSection/> */}
     </>
    
   
