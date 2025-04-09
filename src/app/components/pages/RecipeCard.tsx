@@ -18,11 +18,11 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ title, prepTime, cookTime, serv
         <p>Prep Time: {prepTime}</p>
         <p>Cook Time: {cookTime}</p>
         <p>Servings: {servings}</p>
-        <Link href={`/recipes/${title.replace(/\s+/g, '-').toLowerCase()}`}>
-          <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded">
+
+          <button className="mt-2 bg-[#FF2B6D]  text-white px-4 py-2 rounded">
             View Recipe
           </button>
-        </Link>
+
       </div>
     </div>
   );

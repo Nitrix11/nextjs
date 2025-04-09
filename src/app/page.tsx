@@ -3,7 +3,7 @@ import PopularDishes from "./components/Dishes";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
-import Contact from "./components/pages/ContactPage";
+import Contact from "./components/pages/contact";
 import RecipesSection from "./components/pages/RecipeSection";
 
 
@@ -16,8 +16,8 @@ export default function Home() {
     <AboutSection/>
      <PopularDishes/>
     <Footer/>
-    {/* <Contact/> */}
-  {/* <RecipesSection/> */}
+    <Contact/>
+  <RecipesSection/>
     </>
    
   

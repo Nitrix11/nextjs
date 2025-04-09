@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
               <Link href="/videos" passHref>
                 <p className="block px-4 py-2 hover:bg-primary">Videos</p>
               </Link>
-              <Link href="/Contact" passHref>
+              <Link href="/contact" passHref>
                 <p className="block px-4 py-2 hover:bg-primary">Contact</p>
               </Link>
             </div>
