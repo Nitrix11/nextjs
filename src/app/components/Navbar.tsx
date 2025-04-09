@@ -16,22 +16,22 @@ const Navbar: React.FC = () => {
     <nav className="bg-accent shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo/Text */}
-        <div className="text-xl font-bold text-primary">
+        <Link href="/" className="text-xl font-bold text-primary">
           Nourish and Flourish
-        </div>
+        </Link>
 
         {/* Hamburger Menu */}
         <div className="flex-1 text-center">
           <button
             type="button"
             onClick={toggleMenu}
-            className="text-black focus:outline-none"
+            className="text-white focus:outline-none"
           >
             {menuOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 mx-auto"
-                fill="none"
+                fill="white"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >

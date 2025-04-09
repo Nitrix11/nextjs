@@ -1,10 +1,12 @@
-import AboutSection from "./components/About";
-import PopularDishes from "./components/Dishes";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import Contact from "./components/pages/ContactPage";
-import RecipesSection from "./components/pages/RecipeSection";
+
+import PopularDishes from "@/app/components/Dishes";
+import Footer from "@/app/components/Footer";
+import HeroSection from "@/app//components/HeroSection";
+import Navbar from "@/app/components/Navbar";
+// import Contact from "./components/pages/ContactPage";
+// import RecipesSection from "@/app/components/pages/RecipeSection";
+
+import About from "@/app/components/About";
 
 
 export default function Home() {
@@ -13,11 +15,11 @@ export default function Home() {
     <>
     <Navbar/>
     <HeroSection/>
-    <AboutSection/>
+    <About/>
      <PopularDishes/>
-    <Footer/>
-    {/* <Contact/> */}
-  {/* <RecipesSection/> */}
+    <Footer/> 
+    {/* <Contact/>
+   <RecipesSection/> */}
     </>
    
   
