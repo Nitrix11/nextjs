@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
-import heropic from "../components/image/hero.jpg";
+import heropic from "../components/image/pic1.jpeg"; // Update image to an electrician theme
 
 function StatItem({ number, label, icon }: { number: string; label: string; icon: string }) {
   return (
@@ -38,7 +38,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0 h-screen">
         <Image
           src={heropic}
-          alt="Construction background"
+          alt="Electrician background"
           layout="fill"
           objectFit="cover"
           className="object-cover opacity-70"
@@ -48,7 +48,7 @@ export default function HeroSection() {
 
       {/* Navigation Bar */}
       <nav className="relative z-10 flex justify-between items-center py-6 px-8 border-b border-gray-700">
-        <div className="text-yellow-400 font-bold text-2xl">Hardhat Solution</div>
+        <div className="text-yellow-400 font-bold text-2xl">ElectraFix</div>
         <div className="hidden md:flex space-x-8">
           <a href="#home" className="text-white hover:text-yellow-400">Home</a>
           <a href="#about" className="text-white hover:text-yellow-400">About</a>
@@ -77,11 +77,11 @@ export default function HeroSection() {
       {/* Main Hero Content */}
       <div className="relative z-10 container mx-auto px-8 pt-24 pb-48" id="home">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-light mb-2">Building the Future</h1>
-          <h2 className="text-6xl md:text-8xl font-bold text-yellow-400 mb-8">YOUR VISION, OUR MISSION</h2>
+          <h1 className="text-5xl md:text-7xl font-light mb-2">Powering Your Needs</h1>
+          <h2 className="text-6xl md:text-8xl font-bold text-yellow-400 mb-8">YOUR SAFETY, OUR PRIORITY</h2>
 
           <p className="text-xl md:text-2xl mb-12">
-            At Hardhat Solution, we deliver innovative construction solutions tailored to your needs, ensuring excellence in every project.
+            At ElectraFix, we provide reliable electrical services tailored to your needs, ensuring safety and quality in every project.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -101,9 +101,9 @@ export default function HeroSection() {
 
           {/* Add StatItem components here */}
           <div className="flex justify-evenly mb-16">
-            <StatItem number="100+" label="Projects" icon="🏗️" />
-            <StatItem number="50+" label="Clients" icon="👥" />
-            <StatItem number="98%" label="Satisfaction" icon="✅" />
+            <StatItem number="200+" label="Projects Completed" icon="⚡" />
+            <StatItem number="150+" label="Happy Clients" icon="😊" />
+            <StatItem number="99%" label="Satisfaction Rate" icon="✅" />
           </div>
         </div>
       </div>
@@ -120,9 +120,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold mb-4">Our Commitment</h3>
-            <h4 className="text-4xl font-bold mb-6">Over 30 Years of Excellence</h4>
+            <h4 className="text-4xl font-bold mb-6">Over 20 Years of Excellence</h4>
             <p className="text-gray-700">
-              We pride ourselves on a legacy of quality, innovation, and sustainability, delivering projects that meet the highest standards.
+              We pride ourselves on delivering high-quality electrical services, ensuring safety and satisfaction in every job we undertake.
             </p>
           </motion.div>
 

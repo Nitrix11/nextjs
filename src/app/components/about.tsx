@@ -1,7 +1,7 @@
-"use client"; // Add this line at the very top of your file
+"use client"; 
 
 import Image from 'next/image';
-import pic1 from "./image/download.jpg";
+import pic1 from "./image/pic10.jpeg"; // Update the image path
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
         <div className="w-full h-full rounded-[10px] overflow-hidden">
           <Image
             src={pic1}
-            alt="Description 1"
+            alt="Electrician at work"
             className="object-cover w-full h-full"
             layout="fill"
             objectFit="cover"
@@ -32,7 +32,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          About Hardhat Solution
+          About Our Electrical Services
         </motion.h2>
         <motion.h1
           className="text-[2em] mb-[10px]"
@@ -40,7 +40,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          We are the leader in Construction
+          Your Trusted Electricians
         </motion.h1>
         <motion.p
           className="text-[1em] my-[10px]"
@@ -48,9 +48,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We specialize in residential and commercial electrical services. From installations to repairs, our certified electricians ensure safety and quality in every project.
         </motion.p>
 
         <motion.div
@@ -59,10 +57,10 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <span className="text-[3em] text-[#ffc107] mr-[10px]">850+</span>
+          <span className="text-[3em] text-[#ffc107] mr-[10px]">500+</span>
           <div>
             <span className="text-sm">COMPLETED</span><br />
-            <span className="text-sm">PROJECTS</span>
+            <span className="text-sm">ELECTRICAL PROJECTS</span>
           </div>
         </motion.div>
 
@@ -77,7 +75,7 @@ export default function Home() {
               <path d="M10 15l-5.878 3.09 1.123-6.505L.27 8.24l6.573-.957L10 1l3.15 6.283 6.573.957-4.925 4.345 1.123 6.505z" />
             </svg>
           ))}
-          <span className="text-sm ml-2">5 Rating | 4.5 Reviews</span>
+          <span className="text-sm ml-2">5 Rating | 4.8 Reviews</span>
         </motion.div>
 
         <motion.button
@@ -88,7 +86,7 @@ export default function Home() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Read More
+          Get a Quote
         </motion.button>
       </div>
     </div>

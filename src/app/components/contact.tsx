@@ -1,8 +1,8 @@
-'use client'; // Add this directive at the top
+'use client';
 
 import { useState } from 'react';
-import Image from 'next/image'; // Import the Next.js Image component
-import you from "./image/e28977e2-c930-419f-be96-3a7686693095.jpg"; // Ensure this path is correct
+import Image from 'next/image';
+import electricianImage from "./image/image4.jpg"; // Update the image path
 
 const Contact: React.FC = () => {
     const [name, setName] = useState<string>('');
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 {/* Form and Image Section */}
-                <div className="flex flex-col md:flex-row justify-center items-center"> {/* Center items */}
+                <div className="flex flex-col md:flex-row justify-center items-center">
                     <div className="w-full md:w-1/2 p-4">
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                             <h2 className="text-2xl text-black mb-6">Get In Touch</h2>
@@ -75,12 +75,12 @@ const Contact: React.FC = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 p-4 flex justify-center"> {/* Center the image */}
+                    <div className="w-full md:w-1/2 p-4 flex justify-center">
                         <Image
-                            src={you} // Use the Next.js Image component
-                            alt="Construction Vehicle"
-                            width={400} // Reduced width
-                            height={200} // Reduced height
+                            src={electricianImage} // Use the Next.js Image component
+                            alt="Electrician at work"
+                            width={400}
+                            height={200}
                             className="object-cover rounded-lg"
                         />
                     </div>

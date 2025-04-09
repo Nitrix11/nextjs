@@ -2,10 +2,10 @@ import Image from 'next/image'; // Import Next.js Image component
 import image from './image/image1.jpg';
 import image4 from './image/image4.jpg';
 import image5 from './image/image5.jpg';
-import brand from "./image/WhatsApp Image 2025-03-27 at 03.18.22_767bfbf7.jpg";
+import brand from "./image/image3.jpg";
 import brand2 from "./image/WhatsApp Image 2025-03-27 at 03.43.33_48e2198f.jpg";
 import brand3 from "./image/WhatsApp Image 2025-03-27 at 03.43.34_783c4845.jpg";
-import safety from "./image/0730c127-c646-46ec-8b65-80deea4235dc.jpg";
+import safety from "./image/pic8.jpeg";
 
 const Testimonials = () => {
     return (
@@ -81,9 +81,9 @@ const testimonialsData = [
 ];
 
 const brandsData = [
-    { logo: brand, name: 'Brand 1' },
-    { logo: brand2, name: 'Brand 2' },
-    { logo: brand3, name: 'Brand 3' },
+    { logo: brand, name: 'Lorem, ipsum.' },
+    { logo: brand2, name: 'dolor ' },
+    { logo: brand3, name: 'Lorem, ipsum. ' },
 ];
 
 const blogData = [

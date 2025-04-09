@@ -1,22 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
-import person from "./image/person.jpg";
-import one from "./image/Bulldozer.jpg";
+import electricianImage from "./image/person.jpg"; // Update to an electrician image
+import teamMember from "./image/service3.jpg"; // Update to a relevant team member image
 
-const ConstructionSection = () => {
+const ElectricalSection = () => {
   return (
     <div className="bg-white min-h-screen py-16 px-4">
       <div className="container mx-auto">
         {/* Top Section */}
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 uppercase tracking-tight">
-            Hardhat Solutions 30
+            Your Electric Company
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Building the foundations for your future.
+            Powering Your Future with Excellence.
           </p>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl">
-            Leveraging decades of combined industry expertise, we're dedicated to delivering exceptional construction solutions worldwide. We prioritize quality, efficiency, and client satisfaction in every project.
+            With decades of experience, we specialize in providing top-notch electrical solutions. Our commitment to quality and client satisfaction drives us to deliver exceptional results in every project.
           </p>
         </div>
 
@@ -26,12 +26,12 @@ const ConstructionSection = () => {
           <div className="lg:w-1/2 flex flex-col justify-center">
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
-                <span className="text-red-500 font-bold mr-2">•</span>
-                <span className="text-gray-800 font-medium">Commitment to Excellence in Project Management</span>
+                <span className="text-blue-500 font-bold mr-2">•</span>
+                <span className="text-gray-800 font-medium">Commitment to Safety and Quality in Electrical Work</span>
               </li>
               <li className="flex items-start">
-                <span className="text-red-500 font-bold mr-2">•</span>
-                <span className="text-gray-800 font-medium">Focus on Client Success and Resource Optimization</span>
+                <span className="text-blue-500 font-bold mr-2">•</span>
+                <span className="text-gray-800 font-medium">Focus on Client Satisfaction and Efficient Service</span>
               </li>
             </ul>
 
@@ -64,21 +64,21 @@ const ConstructionSection = () => {
             <div className="flex items-center mb-8">
               <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-gray-300">
                 <Image
-                  src={person}
-                  alt="Project Manager"
+                  src={teamMember}
+                  alt="Lead Electrician"
                   width={64}
                   height={64}
                   className="object-cover"
                 />
               </div>
               <div>
-                <p className="text-2xl font-bold text-gray-800 uppercase">John Smith</p>
-                <p className="text-lg text-gray-600">Lead Project Manager</p>
+                <p className="text-2xl font-bold text-gray-800 uppercase">Jane Doe</p>
+                <p className="text-lg text-gray-600">Lead Electrician</p>
               </div>
             </div>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              With over 30 years of experience, we've cultivated a unique and collaborative work environment, ensuring every project meets our high standards.
+              With over 20 years of experience, we ensure that every project meets high safety and quality standards, providing peace of mind to our clients.
             </p>
           </div>
 
@@ -86,8 +86,8 @@ const ConstructionSection = () => {
           <div className="lg:w-1/2 relative min-h-[400px]">
             <div className="relative h-full w-full rounded-lg overflow-hidden shadow-xl">
               <Image
-                src={one}
-                alt="Construction site"
+                src={electricianImage}
+                alt="Electrician at work"
                 fill
                 className="object-cover"
                 priority
@@ -109,7 +109,7 @@ const ConstructionSection = () => {
                 <iframe
                   className="w-full h-full min-h-[400px]"
                   src="https://www.youtube.com/embed/your_video_id" // Replace your_video_id
-                  title="Construction timelapse"
+                  title="Electrical Installation Timelapse"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -122,7 +122,7 @@ const ConstructionSection = () => {
         {/* Bottom Section */}
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 uppercase">
-            Building the Future Together
+            Empowering Your Future Together
           </h2>
         </div>
       </div>
@@ -130,4 +130,4 @@ const ConstructionSection = () => {
   );
 };
 
-export default ConstructionSection;
+export default ElectricalSection;

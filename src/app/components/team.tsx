@@ -2,26 +2,26 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import image2 from './image/image 2.jpg'; // Ensure the file exists and path is correct
-import image7 from './image/image7.jpg'; // Ensure the file exists and path is correct
-import image6 from './image/image6.jpg'; // Ensure the file exists and path is correct
-
+import electrician1 from './image/person.jpg'; // Update image paths
+import electrician2 from './image/pic6.jpeg';
+import electrician3 from './image/image7.jpg';
+import pic3 from"./image/pic3.jpeg"
 
 const teamMembers = [
     {
-        name: 'Richard Jackson',
-        position: 'Project Manager',
-        imageUrl: image2,
+        name: 'Michael Hove',
+        position: 'Master Electrician',
+        imageUrl: electrician1,
     },
     {
-        name: 'Molly Squared',
-        position: 'Lead Engineer',
-        imageUrl: image7,
+        name: 'Sarah Connor',
+        position: 'Electrical Engineer',
+        imageUrl: electrician2,
     },
     {
-        name: 'Amy Phillips',
-        position: 'Design Specialist',
-        imageUrl: image6,
+        name: 'Emily K',
+        position: 'Customer Support Specialist',
+        imageUrl: electrician3,
     },
 ];
 
@@ -43,8 +43,8 @@ const Services2: React.FC = () => {
                             <Image 
                                 src={member.imageUrl} 
                                 alt={member.name} 
-                                width={500} // Adjust width as needed
-                                height={300} // Adjust height as needed
+                                width={500}
+                                height={300}
                                 className="w-full h-48 object-cover" 
                             />
                             <div className="p-4 text-center">
@@ -56,7 +56,7 @@ const Services2: React.FC = () => {
                 </div>
                 <div className="flex justify-center mt-8">
                     <button
-                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300 "
+                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300"
                         onClick={toggleModal}
                     >
                         Read More
@@ -65,13 +65,13 @@ const Services2: React.FC = () => {
             </div>
 
             {/* Start Here Section with Background Image */}
-            <div className="relative bg-cover bg-center h-96" style={{ backgroundImage: `url(${image6.src})` }}>
+            <div className="relative bg-cover bg-center h-96" style={{ backgroundImage: `url(${pic3.src})` }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
                     <h2 className="text-4xl font-bold mb-4">Your Project Starts Here</h2>
-                    <p className="mb-4">Ready to take the next step? Let’s get started on your project today!</p>
+                    <p className="mb-4">Ready to take the next step? Let’s get started on your electrical project today!</p>
                     <button
-                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300 "
+                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300"
                         onClick={toggleModal}
                     >
                         Get Started
@@ -125,7 +125,7 @@ const Services2: React.FC = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300 "
+                                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-none border-2 border-yellow-500 transition duration-300"
                             >
                                 Submit
                             </button>

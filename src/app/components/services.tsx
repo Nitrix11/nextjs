@@ -1,52 +1,52 @@
-'use client'; // Ensure this is at the top of your file
+"use client"; // Ensure this is at the top of your file
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Navigation, Pagination } from 'swiper/modules';
-import service from './image/service.jpg';
-import service2 from './image/service2.jpg';
-import service3 from './image/service3.jpg';
+import electricalService1 from './image/pic4.jpeg'; // Update image paths
+import electricalService2 from './image/pic5.jpeg'; 
+import electricalService3 from './image/pic9.jpeg';
 import Image from 'next/image';
-import hero2 from "./image/hero2.jpg";
+import hero2 from "./image/pic1.jpeg"; // Update hero image
 import { motion } from 'framer-motion';
-import { FaBuilding, FaTools, FaProjectDiagram, FaDraftingCompass, FaHammer } from 'react-icons/fa'; // Import icons
+import { FaBolt, FaTools, FaProjectDiagram, FaLightbulb, FaShieldAlt } from 'react-icons/fa'; // Import relevant icons
 
 const servicesData = [
   {
-    title: 'General Construction',
-    description: 'Comprehensive construction services from foundation to finish.',
-    imageUrl: service,
-    additionalInfo: '✔ Residential and commercial projects\n✔ Quality materials\n✔ Experienced contractors',
-    icon: <FaBuilding className="text-4xl text-yellow-500 mb-4" />,
+    title: 'Electrical Installations',
+    description: 'Professional installations for residential and commercial properties.',
+    imageUrl: electricalService1,
+    additionalInfo: '✔ Lighting systems\n✔ Wiring upgrades\n✔ Circuit installations',
+    icon: <FaBolt className="text-4xl text-yellow-500 mb-4" />,
   },
   {
-    title: 'Property Maintenance',
-    description: 'Regular maintenance services to keep your property in top condition.',
-    imageUrl: service2,
-    additionalInfo: '✔ Routine check-ups\n✔ Emergency repairs\n✔ Customized maintenance plans',
+    title: 'Maintenance Services',
+    description: 'Regular maintenance to ensure your electrical systems are safe and efficient.',
+    imageUrl: electricalService2,
+    additionalInfo: '✔ Safety inspections\n✔ Routine servicing\n✔ Emergency repairs',
     icon: <FaTools className="text-4xl text-yellow-500 mb-4" />,
   },
   {
     title: 'Project Management',
-    description: 'Expert project management to ensure timely and efficient completion.',
-    imageUrl: service3,
+    description: 'Expert management to ensure timely and efficient electrical project completion.',
+    imageUrl: electricalService3,
     additionalInfo: '✔ Budget management\n✔ Schedule oversight\n✔ Risk assessment',
     icon: <FaProjectDiagram className="text-4xl text-yellow-500 mb-4" />,
   },
   {
-    title: 'Virtual Design & Build',
-    description: 'Innovative design solutions using advanced technology.',
-    imageUrl: service,
-    additionalInfo: '✔ 3D modeling\n✔ Collaborative design\n✔ Efficient workflow',
-    icon: <FaDraftingCompass className="text-4xl text-yellow-500 mb-4" />,
+    title: 'Smart Home Solutions',
+    description: 'Innovative smart home installations for convenience and efficiency.',
+    imageUrl: electricalService1,
+    additionalInfo: '✔ Smart lighting\n✔ Home automation\n✔ Energy management',
+    icon: <FaLightbulb className="text-4xl text-yellow-500 mb-4" />,
   },
   {
-    title: 'Reconstruction',
-    description: 'Expert reconstruction services for damaged properties.',
-    imageUrl: service,
-    additionalInfo: '✔ Structural repairs\n✔ Modern upgrades\n✔ Compliance with regulations',
-    icon: <FaHammer className="text-4xl text-yellow-500 mb-4" />,
+    title: 'Emergency Services',
+    description: '24/7 emergency electrical services for unexpected issues.',
+    imageUrl: electricalService2,
+    additionalInfo: '✔ Quick response\n✔ Safety assured\n✔ Comprehensive repairs',
+    icon: <FaShieldAlt className="text-4xl text-yellow-500 mb-4" />,
   },
 ];
 
@@ -60,7 +60,7 @@ const Services: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Our Services
+          Our Electrical Services
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
@@ -136,7 +136,7 @@ const Services: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              We provide top-notch services that ensure your satisfaction. Our experienced team is dedicated to delivering quality results tailored to your needs.
+              We provide top-notch electrical services that ensure your safety and satisfaction. Our experienced team is dedicated to delivering quality results tailored to your needs.
             </motion.p>
             <motion.p
               className="text-gray-300 mb-4"
