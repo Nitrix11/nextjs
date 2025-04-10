@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import tricia from "../components/image/Tricia.png";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const AboutPage = () => {
 
       <Navbar />
 
-      <div className="bg-[#fffaf5] text-black-800 min-h-screen overflow-x-hidden">
+      <div className="bg-[#000] text-white-800 min-h-screen overflow-x-hidden">
         {/* HERO VIDEO */}
         <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
           <video
@@ -60,7 +61,7 @@ const AboutPage = () => {
             viewport={{ once: true }}
           >
             <img
-              src="/images/tricia-founder.jpg"
+              src={tricia}
               alt="Tricia the Founder"
               className="rounded-2xl shadow-2xl w-full object-cover hover:scale-105 transition-transform duration-300"
             />
@@ -81,7 +82,7 @@ const AboutPage = () => {
             </p>
             <a
               href="/contact"
-              className="inline-block mt-4 px-6 py-3 bg-[#ef5350] text-white font-semibold rounded-full shadow-lg hover:bg-[#d32f2f] transition duration-300"
+              className="inline-block mt-4 px-6 py-3 bg-[#FF2B6D] text-white font-semibold rounded-full shadow-lg hover:bg-[#CF5A70] transition duration-300"
             >
               Connect with Tricia
             </a>
@@ -89,7 +90,7 @@ const AboutPage = () => {
         </section>
 
         {/* PHILOSOPHY */}
-        <section className="bg-white py-20 px-6 text-center">
+        <section className=" py-20 px-6 text-center">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -108,7 +109,7 @@ const AboutPage = () => {
         </section>
 
         {/* IMAGE GALLERY */}
-        <section className="py-16 px-6 bg-[#fff1f1]">
+        <section className="py-16 px-6">
           <div className="max-w-6xl mx-auto">
             <h3 className="text-3xl font-bold text-center mb-10">
               Behind the Scenes
@@ -131,7 +132,7 @@ const AboutPage = () => {
         </section>
 
         {/* VALUES */}
-        <section className="py-20 bg-[#fffaf0] px-6">
+        <section className="py-20 bg-[#333] px-6">
           <div className="max-w-6xl mx-auto text-center mb-12">
             <h3 className="text-3xl font-bold">What We Value</h3>
           </div>
@@ -160,7 +161,7 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition duration-300"
+                className="bg-black rounded-2xl shadow-xl p-6 hover:shadow-2xl transition duration-300"
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
                 <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
@@ -171,7 +172,7 @@ const AboutPage = () => {
         </section>
 
         {/* CTA SECTION */}
-        <section className="py-24 bg-[#4a90e2] text-white text-center px-6 relative overflow-hidden">
+        <section className="py-24 bg-[#FF2B6D] text-white text-center px-6 relative overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -187,7 +188,7 @@ const AboutPage = () => {
             </p>
             <a
               href="/recipes"
-              className="inline-block px-8 py-4 bg-white text-[#4a90e2] font-bold text-lg rounded-full shadow-lg hover:bg-[#f5f5f5] transition duration-300"
+              className="inline-block px-8 py-4 bg-white text-black font-bold text-lg rounded-full shadow-lg hover:bg-[#f5f5f5] transition duration-300"
             >
               Explore Recipes
             </a>

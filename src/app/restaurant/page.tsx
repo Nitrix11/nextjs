@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 
 const Restaurants = () => {
   const restaurants = [
@@ -33,8 +35,10 @@ const Restaurants = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
+  
+    <div className="min-h-screen bg-black-100 text-800">
       {/* Hero Section */}
+      <Navbar/>
       <header className="relative bg-cover bg-center h-96 flex items-center justify-center text-center text-white" style={{ backgroundImage: "url('/images/hero.jpg')" }}>
         <div className="bg-black bg-opacity-50 p-8 rounded-lg">
           <h1 className="text-4xl md:text-6xl font-extrabold">Discover Amazing Restaurants</h1>
@@ -47,7 +51,7 @@ const Restaurants = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Featured Restaurants</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {restaurants.map((restaurant, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div key={index} className="bg-[#333] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img
                 src={restaurant.image}
                 alt={restaurant.name}
@@ -58,7 +62,7 @@ const Restaurants = () => {
                 <p className="text-gray-600 mb-4">{restaurant.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-yellow-500 font-bold">⭐ {restaurant.rating}</span>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                  <button className="bg-pink-600 text-white px-4 py-2 rounded hover:bg-[#D32B6D]-700 transition-colors">
                     Learn More
                   </button>
                 </div>
@@ -88,7 +92,7 @@ const Restaurants = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gradient-to-r from-blue-500 to-teal-500 text-white py-16 text-center">
+      <section className="bg-gradient-to-r from-pink-500 to-black-500 text-white py-16 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Book Your Table?</h2>
         <p className="text-lg mb-6">Reserve your spot at any of these amazing restaurants today!</p>
         <button className="bg-white text-blue-500 px-6 py-3 font-bold rounded-lg shadow hover:bg-gray-100 transition-colors">
@@ -96,35 +100,8 @@ const Restaurants = () => {
         </button>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-8 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Nourish and Flourish</h3>
-            <p>Where every bite is a celebration of flavor.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul>
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">About</a></li>
-              <li><a href="#" className="hover:underline">Recipes</a></li>
-              <li><a href="#" className="hover:underline">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <ul className="flex space-x-4">
-              <li><a href="#" className="hover:underline">Facebook</a></li>
-              <li><a href="#" className="hover:underline">Instagram</a></li>
-              <li><a href="#" className="hover:underline">Twitter</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="text-center mt-8">
-          <p>Copyright © 2025 The Tricia Co, all rights reserved.</p>
-        </div>
-      </footer>
+      
+      <Footer/>
     </div>
   );
 };
